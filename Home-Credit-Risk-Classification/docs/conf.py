@@ -242,3 +242,25 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 # texinfo_show_urls = 'footnote'
+
+
+'''import sys, os
+sys.path.insert(0, os.path.abspath('.'))
+exclude_patterns = ['zzz']
+
+numfig = True
+#language = 'ja'
+
+extensions.append('sphinx.ext.todo')
+extensions.append('sphinx.ext.autodoc')
+#extensions.append('sphinx.ext.autosummary')
+extensions.append('sphinx.ext.intersphinx')
+extensions.append('sphinx.ext.mathjax')
+extensions.append('sphinx.ext.viewcode')
+extensions.append('sphinx.ext.graphviz')
+
+
+autosummary_generate = True
+html_theme = 'default'
+#source_suffix = ['.rst', '.txt']
+© Copyright 2007-2023, the Sphinx developers. Created using Sphinx 6.2.0.'''
