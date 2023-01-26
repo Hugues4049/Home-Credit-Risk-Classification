@@ -64,7 +64,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 import lightgbm as lgb
 
 #import library for hyperparameter optimization
-from hyperopt import STATUS_OK
+#from hyperopt import STATUS_OKntity_from_dataframe
 from hyperopt import hp, tpe, Trials, fmin
 from hyperopt.pyll.stochastic import sample
 

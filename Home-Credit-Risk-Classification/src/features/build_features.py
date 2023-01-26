@@ -1,9 +1,56 @@
+from sys import displayhook
+import warnings
+warnings.filterwarnings("ignore")
+import numpy as np
+import matplotlib.pyplot as plt
+#%matplotlib inline
+import pandas as pd
+import seaborn as sns             
+from timeit import default_timer as timer
+import os
+import random
+import csv
+import json
+import itertools
+import pprint
+from pydash import at
+import gc
+import re
+
+# import featuretools for automated feature engineering
+import featuretools as ft 
+from featuretools import selection
+
+#Import sklearn helper metrics and transformations
+from sklearn.base import TransformerMixin
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split, KFold
+from sklearn.utils import resample
+from sklearn.metrics import confusion_matrix,accuracy_score,precision_score,recall_score,roc_auc_score,classification_report,roc_curve,auc, f1_score
+
+#Import models
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+from xgboost import XGBClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+import lightgbm as lgb
+
+#import library for hyperparameter optimization
+#from hyperopt import STATUS_OKntity_from_dataframe
+from hyperopt import hp, tpe, Trials, fmin
+from hyperopt.pyll.stochastic import sample
+
+
+
 
 import os
 import sys
 os.path.join(os.path.dirname(__file__), '../')
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
-from data.make_dataset import *
+#from data.make_dataset import application_train
+from visualization.visualize import  application_train
 
 
 
@@ -133,4 +180,75 @@ base_case_train['SK_ID_CURR'] = skid_temp
 
 print('Data shape: ', base_case_train.shape)
 
-base_case_train.to_csv("./Home-Credit-Risk-Classification/data/interim/base_case_train.csv")
+base_case_train.to_csv("./Home-Credit-Risk-Classification/data/interim/base_case_train.csv".format(pd.datetime.now().strftime("%Y-%m-%d_%Hh%Mm%Ss")),index=False)
+
+'''apply our limited domain knowlege to create few more variables, specifically ratios accounting for the credit income %, 
+annuity income %, credit term, and fraction of years employed'''
+#Domain knowledge
+
+application_train_new['CREDIT_INCOME_PERCENT'] = application_train_new['AMT_CREDIT'] / application_train_new['AMT_INCOME_TOTAL']
+application_train_new['ANNUITY_INCOME_PERCENT'] = application_train_new['AMT_ANNUITY'] / application_train_new['AMT_INCOME_TOTAL']
+application_train_new['CREDIT_TERM'] = application_train_new['AMT_ANNUITY'] / application_train_new['AMT_CREDIT']
+application_train_new['YEARS_EMPLOYED_PERCENT'] = application_train_new['YEARS_EMPLOYED'] / application_train_new['AGE']
+displayhook(application_train_new.head(3))
+
+
+''' Automated Feature Engineering using Featuretools'''
+# Iterate through the columns and record the Boolean columns
+
+def bool_type(df):
+
+    col_type = {}
+
+    for col in df:
+        # If column is a number with only two values, encode it as a Boolean
+        if (df[col].dtype != 'object') and (len(df[col].unique()) <= 2):
+            col_type[col] = ft.variable_types.Boolean
+
+    print('Number of boolean variables: ', len(col_type))
+    return col_type
+
+train_col_type = bool_type(application_train_new)
+train_col_type['REGION_RATING_CLIENT'] = ft.variable_types.Ordinal
+train_col_type['REGION_RATING_CLIENT_W_CITY'] = ft.variable_types.Ordinal
+
+
+# Entity set with id applications
+es = ft.EntitySet(id = 'clients')
+
+# Entities with a unique index
+es = es.entity_from_dataframe(entity_id = 'app', dataframe = application_train_new, index = 'SK_ID_CURR', variable_types = train_col_type)
+print(es)
+
+
+# List the primitives in a dataframe
+primitives = ft.list_primitives()
+pd.options.display.max_colwidth = 100
+displayhook(primitives[primitives['type'] == 'aggregation'].head(5))
+displayhook(primitives[primitives['type'] == 'transform'].head(5))
+
+
+# Default primitives from featuretools
+default_agg_primitives =  ['sum', 'count', 'min', 'max', 'mean', 'mode']
+default_trans_primitives =  ['diff', 'cum_sum', 'cum_mean', 'percentile']
+
+# DFS with specified primitives
+feature_names = ft.dfs(entityset = es, target_entity = 'app',
+                       trans_primitives = default_trans_primitives,
+                       agg_primitives=default_agg_primitives)
+                       ##max_depth = 2, features_only=True)
+
+print('%d Total Features' % len(feature_names))
+
+
+# DFS with default primitives
+print('hello je suis ')
+feature_matrix, feature_names = ft.dfs(entityset = es, target_entity = 'app',
+                                       trans_primitives = default_trans_primitives,
+                                       agg_primitives=default_agg_primitives)
+                                       ##max_depth = 2, features_only=False, verbose = True)
+
+pd.options.display.max_columns = 3000
+feature_matrix.head(5)
+print('hello je suis la')
+feature_matrix.to_csv("./Home-Credit-Risk-Classification/data/processed/feature_matrix.csv".format(pd.datetime.now().strftime("%Y-%m-%d_%Hh%Mm%Ss")),index=False)
