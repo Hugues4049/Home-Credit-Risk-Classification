@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/bcc3d1bee9df4c749a34526f664207e1/artifacts
+end_time: 1674933402175
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bcc3d1bee9df4c749a34526f664207e1
+run_name: kindly-roo-921
+run_uuid: bcc3d1bee9df4c749a34526f664207e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674933399354
+status: 4
+tags: []
+user_id: roland

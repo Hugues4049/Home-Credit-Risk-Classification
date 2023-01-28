@@ -1,0 +1,20 @@
+python: "3.9"
+build_dependencies:
+  - pip
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - featuretools==0.16.0
+      - hyperopt==0.2.7
+      - lightgbm==3.3.4
+      - matplotlib==3.3.4
+      - mlflow==2.0.1
+      - numpy==1.19.5
+      - pandas==1.1.5
+      - pydash==5.1.2
+      - scikit_learn==1.2.1
+      - seaborn==0.11.2
+      - setuptools==65.5.0
+      - xgboost==1.7.3
+      - mlflow==2.0.1

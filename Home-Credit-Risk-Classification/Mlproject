@@ -1,0 +1,13 @@
+name: bigdata_project
+
+python_env: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      n_estimators: {type: int, default: 100}
+      max_depth_rfc: {type: int, default: 2}
+      max_depth_dtc: {type: int, default: 2}
+      criterion: {type: str, default: 'entropy'}
+    command: "python3 predict_model.py {n_estimators} {max_depth_rfc} {max_depth_dtc} {criterion}"
+

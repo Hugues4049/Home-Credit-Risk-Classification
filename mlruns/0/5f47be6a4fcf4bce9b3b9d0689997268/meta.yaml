@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/5f47be6a4fcf4bce9b3b9d0689997268/artifacts
+end_time: 1674924283157
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5f47be6a4fcf4bce9b3b9d0689997268
+run_name: clumsy-lark-796
+run_uuid: 5f47be6a4fcf4bce9b3b9d0689997268
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674924134628
+status: 3
+tags: []
+user_id: roland

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/36556b1ef71e4950b3ecba7a9e1d2535/artifacts
+end_time: 1674925004870
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36556b1ef71e4950b3ecba7a9e1d2535
+run_name: wistful-horse-837
+run_uuid: 36556b1ef71e4950b3ecba7a9e1d2535
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674924860438
+status: 4
+tags: []
+user_id: roland

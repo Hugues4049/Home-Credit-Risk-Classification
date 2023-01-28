@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/a050c0a2c3184b17bd5a47a8adf21e78/artifacts
+end_time: 1674934966205
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a050c0a2c3184b17bd5a47a8adf21e78
+run_name: loud-bat-246
+run_uuid: a050c0a2c3184b17bd5a47a8adf21e78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674934809690
+status: 3
+tags: []
+user_id: roland

@@ -51,7 +51,7 @@ os.path.join(os.path.dirname(__file__), '../')
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 #from features.build_features import  feature_matrix
 
-feature_matrix = pd.read_csv("./Home-Credit-Risk-Classification/data/interim/base_case_train.csv")
+feature_matrix = pd.read_csv("./Home-Credit-Risk-Classification/data/raw/feature_matrix.csv")
 
 '''Data split and imbalance correction
 
@@ -97,25 +97,3 @@ df_undersampled_Y = df_undersampled[["TARGET"]]
 First, we create a function for the classifier to train on data, 
 predict using test data, and visualize the metrics'''
 #Model function
-
-def model_run(algorithm,dtrain_X,dtrain_Y,dtest_X,dtest_Y,cols=None):
-
-    algorithm.fit(dtrain_X[cols],dtrain_Y)
-    predictions = algorithm.predict(dtest_X[cols])
-    prediction_probabilities = algorithm.predict_proba(dtest_X[cols])[:,1]
-    
-    accuracy = accuracy_score(dtest_Y,predictions)
-    classify_metrics = classification_report(dtest_Y,predictions)
-    f1=f1_score(dtest_Y,predictions)
-    
-    fpr , tpr , thresholds   = roc_curve(dtest_Y,prediction_probabilities)
-    auc_score = auc(fpr,tpr)
-    
-    print (algorithm)
-    print ("Accuracy score : ", accuracy)
-    print ("F1 score : ", f1)
-    print ("AUC : ", auc_score)
-    print ("classification report :\n", classify_metrics)
-    
-    return accuracy, classify_metrics, fpr , tpr, auc_score, f1
-    #return accuracy, classify_metrics, auc_score, f1
