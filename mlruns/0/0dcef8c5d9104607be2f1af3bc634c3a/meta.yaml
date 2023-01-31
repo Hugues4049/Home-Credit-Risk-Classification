@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/0dcef8c5d9104607be2f1af3bc634c3a/artifacts
+end_time: 1674999827242
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0dcef8c5d9104607be2f1af3bc634c3a
+run_name: gentle-gnat-545
+run_uuid: 0dcef8c5d9104607be2f1af3bc634c3a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674999691358
+status: 3
+tags: []
+user_id: roland

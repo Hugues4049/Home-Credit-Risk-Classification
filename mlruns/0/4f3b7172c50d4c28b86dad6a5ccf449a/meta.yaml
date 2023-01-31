@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/4f3b7172c50d4c28b86dad6a5ccf449a/artifacts
+end_time: 1674939737936
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4f3b7172c50d4c28b86dad6a5ccf449a
+run_name: tasteful-auk-549
+run_uuid: 4f3b7172c50d4c28b86dad6a5ccf449a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674939734948
+status: 4
+tags: []
+user_id: roland

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/e4e927e02d724bbb9e1859face616beb/artifacts
+end_time: 1674939822877
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e4e927e02d724bbb9e1859face616beb
+run_name: kindly-smelt-357
+run_uuid: e4e927e02d724bbb9e1859face616beb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674939819539
+status: 4
+tags: []
+user_id: roland

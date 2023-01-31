@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/97b156377a05436d9c7b0a7d8f795c97/artifacts
+end_time: 1674939882407
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 97b156377a05436d9c7b0a7d8f795c97
+run_name: auspicious-slug-339
+run_uuid: 97b156377a05436d9c7b0a7d8f795c97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674939879224
+status: 4
+tags: []
+user_id: roland

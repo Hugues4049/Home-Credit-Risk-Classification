@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/4cfc15c9d630451f9d97df0bbcb335df/artifacts
+end_time: 1675126099433
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4cfc15c9d630451f9d97df0bbcb335df
+run_name: dashing-fox-762
+run_uuid: 4cfc15c9d630451f9d97df0bbcb335df
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675125962948
+status: 3
+tags: []
+user_id: roland

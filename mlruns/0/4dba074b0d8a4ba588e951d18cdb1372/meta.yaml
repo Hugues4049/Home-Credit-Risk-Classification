@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/4dba074b0d8a4ba588e951d18cdb1372/artifacts
+end_time: 1674834270696
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4dba074b0d8a4ba588e951d18cdb1372
+run_name: calm-snail-855
+run_uuid: 4dba074b0d8a4ba588e951d18cdb1372
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674834114484
+status: 3
+tags: []
+user_id: roland

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/6183a1d1f49646eda13108f5358bbebb/artifacts
+end_time: 1674821286592
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6183a1d1f49646eda13108f5358bbebb
+run_name: indecisive-whale-774
+run_uuid: 6183a1d1f49646eda13108f5358bbebb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674821134149
+status: 4
+tags: []
+user_id: roland
