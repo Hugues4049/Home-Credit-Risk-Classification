@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/4c369e70770e47d78128ff78127416cc/artifacts
+end_time: 1675080276246
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4c369e70770e47d78128ff78127416cc
+run_name: unequaled-perch-124
+run_uuid: 4c369e70770e47d78128ff78127416cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675080139112
+status: 3
+tags: []
+user_id: roland

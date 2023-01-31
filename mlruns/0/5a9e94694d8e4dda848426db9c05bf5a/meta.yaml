@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/5a9e94694d8e4dda848426db9c05bf5a/artifacts
+end_time: 1675115448047
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5a9e94694d8e4dda848426db9c05bf5a
+run_name: stately-hen-599
+run_uuid: 5a9e94694d8e4dda848426db9c05bf5a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675115304118
+status: 3
+tags: []
+user_id: roland

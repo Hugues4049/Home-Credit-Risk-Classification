@@ -1,0 +1,15 @@
+artifact_uri: file:///home/roland/Bureau/M2%20DATA/Application%20of%20bigdata%202/Home-Credit-Risk-Classification/mlruns/0/f6f8732704fe4a94995d440b28d4c0aa/artifacts
+end_time: 1675115197381
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f6f8732704fe4a94995d440b28d4c0aa
+run_name: incongruous-mule-721
+run_uuid: f6f8732704fe4a94995d440b28d4c0aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675115054808
+status: 3
+tags: []
+user_id: roland
